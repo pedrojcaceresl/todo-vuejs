@@ -45,7 +45,6 @@ const client = axios.create({
 		Authorization: `Bearer ${process.env.VUE_APP_GITHUB_TOKEN}`,
 	},
 });
-// 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
 export default {
 	name: "IssueList",
 
