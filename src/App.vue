@@ -1,24 +1,22 @@
 <template>
   <div id="app">
     <el-menu
-      default-active = "4"
-      class="el-menu-demo"
       mode="horizontal"
       background-color="#3498db"
       text-color="#ffffff"
       active-text-color="#ffffff"
     >
       <el-menu-item index="1">
-        <router-link :to="{ path: '/'}">Home</router-link>
+        <router-link :to="{ path: '/'}" class="custom-menu-item">Home</router-link>
       </el-menu-item>
       <el-menu-item index="2">
-        <router-link :to="{ path: '/todo-list'}">Todo List</router-link>
+        <router-link :to="{ path: '/todo-list'}" class="custom-menu-item">Todo List</router-link>
       </el-menu-item>
       <el-menu-item index="3">
-        <router-link :to="{ path: '/issue-list'}">Issues</router-link>
+        <router-link :to="{ path: '/issue-list'}" class="custom-menu-item">Issues</router-link>
       </el-menu-item>
       <el-menu-item index="4">
-        <router-link :to="{ path: 'todo-issues'}">Todo Issues</router-link>
+        <router-link :to="{ path: '/todo-issues'}" class="custom-menu-item">Todo Issues</router-link>
       </el-menu-item>
     </el-menu>
 
@@ -42,7 +40,10 @@
   text-align: center;
   color: #2c3e50;
 }
-
+.custom-menu-item {
+  display: block;
+  line-height: 64px; /* Adjust this value based on your menu height */
+}
 nav {
   padding: 30px;
 }
